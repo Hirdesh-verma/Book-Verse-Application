@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Verse Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Book Verse Application</h1>
+    <h5>SIRT collage bhopal(M.P.)</h5>
+
+    <!-- Add New Book Section -->
+    <div class="form-section">
+      <h2>Add New Book</h2>
+      <label for="bookTitle">Book Title:</label>
+      <input type="text" id="bookTitle" placeholder="Enter Book Title">
+      <label for="bookAuthor">Book Author:</label>
+      <input type="text" id="bookAuthor" placeholder="Enter Book Author">
+      <button onclick="addBook()">Add Book</button>
+    </div>
+
+    <!-- Add Verse Section -->
+    <div class="form-section">
+      <h2>Add Verse to a Book</h2>
+      <label for="selectBook">Select Book:</label>
+      <select id="selectBook">
+        <option value="">Select Book</option>
+      </select>
+      <label for="verseContent">Verse Content:</label>
+      <textarea id="verseContent" rows="4" placeholder="Enter verse content here"></textarea>
+      <label for="bookLink">Enter Book Link:</label>
+      <input type="url" id="bookLink" placeholder="Enter Book Link (e.g., https://example.com)">
+      <button onclick="addVerse()">Add Verse</button>
+    </div>
+
+    <!-- Search Section -->
+    <div class="form-section">
+      <h2>Search Verses in a Book</h2>
+      <input type="text" id="searchTitle" placeholder="Search by Book Title">
+      <button onclick="searchBooks()">Search</button>
+    </div>
+
+    <!-- Book List Section -->
+    <div class="book-list" id="bookList">
+      <h2>All Books and Verses</h2>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
